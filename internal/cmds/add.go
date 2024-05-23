@@ -15,7 +15,6 @@ var AddCmd = &cobra.Command{
 	Use:   "add",
 	Short: "Add a command to the ksc",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Add a command")
 		if len(args) < 2 {
 			fmt.Println("Required command and description to add command > `ksc add <cmd> <desc>`")
 			os.Exit(1)
@@ -32,6 +31,9 @@ var AddCmd = &cobra.Command{
 		})
 
 		persistence.SaveToGob(constants.PERSISTED_DATA_FILE_NAME, existingCmds)
+
+		fmt.Println("[INFO]: Successfully added a command to KSC")
+		fmt.Printf("[INFO]: Total command registered %d commands\n", len(existingCmds))
 
 	},
 }
