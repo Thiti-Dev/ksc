@@ -1,6 +1,10 @@
 # KSC (Known Shell Commands) 🚀
+<p align="center">
+<img src="https://github.com/Thiti-Dev/ksc/assets/36455825/92211c4d-367d-4464-a0b4-1ce4cdc484b9">
+</p>
 
 KSC is a Terminal User Interface (TUI) executable written in Go, designed to manage and execute frequently used shell commands efficiently. It allows users to store, search, and execute commands, including those with arguments, through an intuitive and interactive interface. 🖥️✨
+
 
 ## Features 🌟
 
