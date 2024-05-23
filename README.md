@@ -26,7 +26,7 @@ KSC is a Terminal User Interface (TUI) executable written in Go, designed to man
 
 3. **Build the executable**:
     ```sh
-    go build -o ksc
+    go build -o ksc ./cmd/cli/*
     ```
     🏗️🚀
 
