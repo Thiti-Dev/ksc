@@ -8,8 +8,8 @@ import (
 
 	"github.com/Thiti-Dev/ksc/internal/cmds/helpers"
 	"github.com/Thiti-Dev/ksc/internal/constants"
-	"github.com/Thiti-Dev/ksc/internal/list"
 	"github.com/Thiti-Dev/ksc/internal/persistence"
+	"github.com/Thiti-Dev/ksc/internal/tui/list"
 	"github.com/Thiti-Dev/ksc/internal/types"
 	"github.com/google/uuid"
 	"github.com/spf13/cobra"
