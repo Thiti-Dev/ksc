@@ -28,8 +28,8 @@ func findCmdFromUUID(cmds []types.CommandList, uuid uuid.UUID) (*types.CommandLi
 }
 
 var RootCmd = &cobra.Command{
-	Use:   "mycli",
-	Short: "A brief description of your application",
+	Use:   "main",
+	Short: "KSC's command hub",
 	Run: func(_ *cobra.Command, args []string) {
 		loadedCmds, err := persistence.LoadFromGob[types.CommandList](constants.PERSISTED_DATA_FILE_NAME)
 		if err != nil {
