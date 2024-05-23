@@ -7,6 +7,7 @@ require (
 	github.com/charmbracelet/bubbletea v0.26.2
 	github.com/charmbracelet/lipgloss v0.10.0
 	github.com/common-nighthawk/go-figure v0.0.0-20210622060536-734e95fb86be
+	github.com/google/uuid v1.6.0
 	github.com/spf13/cobra v1.8.0
 )
 
