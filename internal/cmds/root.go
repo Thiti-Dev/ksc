@@ -60,6 +60,7 @@ var RootCmd = &cobra.Command{
 
 		if len(argPlaceholders) == 0 {
 			// just execute the command right away
+			fmt.Println("> " + targetCmd.Cmd)
 			helpers.ExecuteShellCommand(targetCmd.Cmd)
 			os.Exit(0) // after execution, exit the process
 		}
