@@ -5,10 +5,12 @@ import (
 	"log"
 	"os"
 	"regexp"
+	"strings"
 
 	"github.com/Thiti-Dev/ksc/internal/cmds/helpers"
 	"github.com/Thiti-Dev/ksc/internal/constants"
 	"github.com/Thiti-Dev/ksc/internal/persistence"
+	"github.com/Thiti-Dev/ksc/internal/tui/inputmgr"
 	"github.com/Thiti-Dev/ksc/internal/tui/list"
 	"github.com/Thiti-Dev/ksc/internal/types"
 	"github.com/google/uuid"
@@ -62,8 +64,17 @@ var RootCmd = &cobra.Command{
 			os.Exit(0) // after execution, exit the process
 		}
 
-		// Print the placeholders
-		fmt.Println(argPlaceholders)
+		fmt.Println("> " + targetCmd.Cmd)
 
+		filledArgs := inputmgr.ShowInteractiveArgumentPlaceholdersFiller(argPlaceholders)
+
+		executionCommand := targetCmd.Cmd
+
+		for i, placeholder := range argPlaceholders {
+			executionCommand = strings.Replace(executionCommand, placeholder, filledArgs[i], 1)
+		}
+
+		fmt.Println("> " + executionCommand)
+		helpers.ExecuteShellCommand(executionCommand)
 	},
 }
