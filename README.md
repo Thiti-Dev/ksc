@@ -17,7 +17,7 @@ KSC is a Terminal User Interface (TUI) executable written in Go, designed to man
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/ksc.git
+    git clone https://github.com/Thiti-Dev/ksc.git
     cd ksc
     ```
     📂📥
