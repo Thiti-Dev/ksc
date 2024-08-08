@@ -13,5 +13,5 @@ func SaveToGob[T any](filename string, data []T) error {
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(filename, buffer.Bytes(), 0644)
+	return os.WriteFile(JoinOriginPath(filename), buffer.Bytes(), 0644)
 }

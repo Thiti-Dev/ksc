@@ -7,7 +7,7 @@ import (
 )
 
 func LoadFromGob[T any](filename string) ([]T, error) {
-	data, err := os.ReadFile(filename)
+	data, err := os.ReadFile(JoinOriginPath(filename))
 	if err != nil {
 		return nil, err
 	}
